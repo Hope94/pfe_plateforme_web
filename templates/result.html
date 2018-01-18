@@ -1,0 +1,309 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>AntiMalware &mdash; Plateforme d'analyse des app Android</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Analyse et détection des logiciels malveillants sur la plateforme Android" />
+	<meta name="keywords" content="Analysis,free, Android, Malwares, Anti-Malwares, static analysis, mobile ,dynamic analysis, malware detection" />
+	<meta name="author" content="" />
+
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="{% static "favicon.ico" %}">
+
+	<!-- Google Webfonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel='stylesheet' type='text/css'>
+	<link href= "https://fonts.googleapis.com/css?family=Open+Sans"  rel='stylesheet' type='text/css'>
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+	<!-- Simple Line Icons-->
+	<link rel="stylesheet" href="{% static 'css/simple-line-icons.css' %}">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+	<!-- Salvattore
+	<link rel="stylesheet" href="{% static 'css/salvattore.css' %}">
+	-->
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<!-- Modernizr JS -->
+	<script src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="{% static 'js/respond.min.js' %}"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+		
+	<div id="fh5co-offcanvass">
+		<ul>
+			<li class="active"><a href="#" data-nav-section="home">Acceuil</a></li>
+			<li><a href="#" data-nav-section="features">Scannez votre App</a></li>
+			<li><a href="#" data-nav-section="benefits">Fonctionnalités</a></li>
+			<li><a href="#" data-nav-section="Contact">Contactez nous</a></li>
+		</ul>
+		
+	</div>
+	
+	<div id="fh5co-menu" class="navbar">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#fh5co-navbar" aria-expanded="false" aria-controls="navbar"><span>Menu</span> <i></i></a>
+					<a href="index.html" class="navbar-brand"><span>Anti-Malwares</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<div id="fh5co-page">
+		<div id="fh5co-wrap">
+			<div id="fh5co-main">
+				<div id="fh5co-features" data-section="features">
+					<div class="container">
+						<div class="row">
+
+							<div class="col-md-12 ">
+								<div class="col-md-1">
+									<img src="images/ic_launcher.jpg" class="rounded float-left img-thumbnail"alt="...">
+								</div>
+								<div class="col-md-8 fh5co-section-heading text-left">
+									<h2 class="fh5co-sub-lead ">Rapport d'analyse </h2>
+									<table class="table table-sm ">
+
+										<tbody>
+										<tr>
+											<th scope="row">Nom du fichier</th>
+												<td>{{ file_name }}</td>
+										</tr>
+										<tr>
+											<th scope="row">Application package</th>
+											<td>Jacob</td>
+										</tr>
+										<tr>
+											<th scope="row">Date de scan</th>
+											<td colspan="2">{{ scan_datetime}}</td>
+										</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+
+
+							<div class="col-md-12 col-sm-12 col-xs-12 col-xxs-12">
+									<div class="row" >
+										<ul class="nav nav-tabs" id="myTab" role="tablist">
+											<li class="nav-item">
+												<a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Détails</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">rapport SVM</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">VirusTotal</a>
+											</li>
+										</ul>
+
+                                        <div class="tab-content" id="myTabContent">
+
+                                          <div class="tab-pane " id="home" role="tabpanel" aria-labelledby="home-tab">
+                                              <div class="container">
+                                                  <div class="row">
+                                                <div class="panel panel-default">
+													<div class="panel-body">
+														<div class="col-md-12">
+															<table class="table table-sm ">
+																<tbody>
+																<tr>
+																	<th scope="row">MD5</th><td>{{ md5 }}</td>
+																</tr>
+																<tr>
+																	<th scope="row">SHA 256</th><td>{{ sha256 }}</td>
+																</tr>
+																</tbody>
+															</table>
+														</div>
+														<div class="col-md-8 fh5co-section-heading text-left">
+															<h4 class="fh5co-sub-lead ">Les permissions</h4>
+                                                            <p>{{ permissions }}</p>
+														</div>
+                                                        <div class="col-md-8 fh5co-section-heading text-left">
+															<h4 class="fh5co-sub-lead ">Activities</h4>
+                                                            <p>{{ activities }}</p>
+														</div>
+                                                         <div class="col-md-8 fh5co-section-heading text-left">
+															<h4 class="fh5co-sub-lead ">Services</h4>
+                                                             <p>{{ services }}</p>
+														</div>
+                                                        <div class="col-md-8 fh5co-section-heading text-left">
+															<h4 class="fh5co-sub-lead ">Receivers</h4>
+                                                            <p>{{ receivers }}</p>
+														</div>
+														<div class="col-md-8 fh5co-section-heading text-left">
+															<h4 class="fh5co-sub-lead ">Providers</h4>
+                                                            <p>{{ providers }}</p>
+														</div>
+													</div>
+												</div>
+                                          </div>
+                                              </div>
+                                          </div>
+
+                                          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                            <div class="panel panel-default">
+													<div class="panel-body">
+														<div class="col-md-5">
+															<table class="table table-sm ">
+																<tbody>
+																<tr>
+																	<th scope="row">Score de malignité</th>
+																	<td>{{ app_score }}</td>
+																</tr>
+																<tr>
+																	<th scope="row">Seuil décision</th>
+																	<td>{{ threshold }}</td>
+																</tr>
+																<tr>
+																	<th scope="row">Score relatif</th>
+																	<td>{{ relatif_score }}</td>
+																</tr>
+																</tbody>
+															</table>
+														</div>
+														<div class="col-md-8 fh5co-section-heading text-left">
+															<h4 class="fh5co-sub-lead ">Les caractéristiques extraites de l'application</h4>
+															<table class="table table-sm ">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">Caractéristique</th>
+                                                                        <th scope="col">Coefficient</th>
+                                                                    </tr>
+                                                                  </thead>
+																<tbody>
+																{% for key,value in feature_weight.items %}
+                                                                    <tr>
+                                                                        <td>{{ key }}</td><td>{{ value }}</td>
+                                                                    </tr>
+                                                                {% endfor %}
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+                                          </div>
+                                          <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                                <div class="panel panel-default">
+													<div class="panel-body">
+														<div class="col-md-8 fh5co-section-heading text-left">
+															<h4 class="fh5co-sub-lead ">Propriétés de base</h4>
+															<table class="table table-sm ">
+																<tbody>
+                                                                   <tr>
+																	    <th scope="row">Date de scan</th>
+																	    <td>{{ scan_date }}</td>
+																    </tr>
+                                                                    <tr>
+																	    <th scope="row">Total scan</th>
+																	    <td>{{ total }}</td>
+																    </tr>
+
+																</tbody>
+															</table>
+														</div>
+                                                        <div class="col-md-8 fh5co-section-heading text-left">
+															<h4 class="fh5co-sub-lead ">Résultat d'analyse par les Anti-virus</h4>
+															<table class="table table-sm ">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col">Anti-virus</th>
+                                                                        <th scope="col">Résultat</th>
+                                                                    </tr>
+                                                                  </thead>
+																<tbody>
+																{% for av_name,value in scans.items %}
+                                                                    <tr>
+                                                                        <td>{{ av_name }}</td>
+                                                                        {% if value.detected  is True%}
+                                                                           <td><span class="badge badge-danger" style="background-color: #dc3545;">Danger</span></td>
+                                                                            {% endif %}
+                                                                            {% if value.detected is not True %}
+                                                                                  <td><span class="badge badge-success " style="background-color: #28a745;">Clean</span></td>
+                                                                            {% endif %}
+                                                                    </tr>
+                                                                {% endfor %}
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+                                          </div>
+
+                                        </div> <!-- END OF TAB Content -->
+
+                                    </div>
+                            </div>
+
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer id="fh5co-footer" style="">
+			<div class="fh5co-overlay"></div>
+			<div class="fh5co-footer-content">
+				<div class="container">
+					<div class="row">
+							<p class="fh5co-copyright"><small>&copy; 2017. All Rights Reserved. </small></p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+
+	<!-- jQuery -->
+	<script src="{% static "js/jquery.min.js" %}"></script>
+	<!-- jQuery Easing -->
+	<script src="{% static "js/jquery.easing.1.3.js" %}"></script>
+	<!-- Bootstrap -->
+	<script src="{% static "js/bootstrap.min.js" %}"></script>
+	<!-- Waypoints -->
+	<script src="{% static "js/jquery.waypoints.min.js" %}"></script>
+	<!-- Magnific Popup -->
+	<script src="{% static "js/jquery.magnific-popup.min.js" %}"></script>
+	<!-- Owl Carousel -->
+	<script src="{% static "js/owl.carousel.min.js" %}"></script>
+	<!-- toCount -->
+	<script src="{% static "js/jquery.countTo.js" %}"></script>
+	<!-- Main JS -->
+	<script src="{% static "js/main.js" %}"></script>
+
+	
+
+	
+	</body>
+</html>

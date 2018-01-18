@@ -5400,6 +5400,7 @@ a.label:hover, a.label:focus {
 
 .label-danger {
   background-color: #d9534f;
+
 }
 .label-danger[href]:hover, .label-danger[href]:focus {
   background-color: #c9302c;
@@ -5407,20 +5408,20 @@ a.label:hover, a.label:focus {
 
 .badge {
   display: inline-block;
-  min-width: 10px;
-  padding: 3px 7px;
-  font-size: 12px;
-  font-weight: bold;
-  color: #fff;
+  padding: 0.25em 0.4em;
+  font-size: 75%;
+  font-weight: 700;
   line-height: 1;
-  vertical-align: middle;
-  white-space: nowrap;
   text-align: center;
-  background-color: #777777;
-  border-radius: 10px;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
 }
 .badge:empty {
   display: none;
+}
+.badge-danger {
+  background-color: #d9534f;
 }
 .btn .badge {
   position: relative;

@@ -19,6 +19,7 @@ from detection_app import views
 
 urlpatterns = [
     path('',views.index,name='index'),
+
     path('training/',include('training_app.urls',namespace='training')),
     path('accounts/', include('accounts.urls', namespace='accounts')),
     path('accounts/', include('django.contrib.auth.urls')),

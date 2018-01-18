@@ -43,11 +43,11 @@
 	<!-- Owl Carousel -->
 	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
 	<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 	<!-- Salvattore
 	<link rel="stylesheet" href="{% static 'css/salvattore.css' %}">
 	-->
 	<!-- Theme Style -->
-	<link rel="stylesheet" href="{% static 'css/style.css' %}">
 	<!-- Modernizr JS -->
 	<script src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
 	<!-- FOR IE9 below -->
@@ -86,7 +86,7 @@
 				<div class="fh5co-intro">
 					<div class="container">
 						<div class="row">
-							
+
 							<div class="col-md-6 fh5co-text">
 								<h2 class="to-animate intro-animate-1">Scannez vos applications Android GRATUITEMENT !</h2>
 								<p class="to-animate intro-animate-2">Anti-Malwares, une plateforme d'analyse et détection de Malwares sous Android.</p>
@@ -120,7 +120,7 @@
 								<p class="fh5co-sub to-animate">Veuillez uploader une application Android (fichier apk) et le système Anti-Malwares analysera le fichier à la recherche d'un comportement malveillant.</p>
 							</div>
 							<div class="col-md-12 col-sm-12 col-xs-12 col-xxs-12">
-                                <form method="post" enctype="multipart/form-data">
+                                <form method="post" enctype="multipart/form-data" >
                                 <div class="fh5co-feature to-animate">
 
 									 <div class="row" >
@@ -133,6 +133,7 @@
 													<div class="col-md-12 text-center">
 														<h4 class="fh5co-uppercase-sm">Méthode d'analyse</h4>
 														<p>choisissez une ou plusieurs méthodes .</p>
+
 													</div>
                                                     <div class="col-md-12  col-md-offset-3 text-left ">
                                                             <div class="form-check form-check-inline">
@@ -162,9 +163,7 @@
 
                                                      {% csrf_token %}
                                                     <input type="file" name="myfile"/>
-
 													<br />
-													
 													<!-- Drop Zone -->
 													<div class="upload-drop-zone" id="drop-zone"> Ou glisser et déposer le fichier apk </div>
                                                     <!-- Upload Finished -->
@@ -180,12 +179,8 @@
 												</div>
 											</div>
 										</div>
-									   
-										
-										
 									</div>
-									
-									
+
 									<div class="col-md-4 col-md-offset-4 text-center to-animate">
                                         <button type="submit" class="btn btn-primary">Scanner</button>
 
@@ -383,6 +378,8 @@
 	</div>
 
 
+
+
 	<!-- jQuery -->
 	<script src="{% static "js/jquery.min.js" %}"></script>
 	<!-- jQuery Easing -->
@@ -400,7 +397,11 @@
 	<!-- Main JS -->
 	<script src="{% static "js/main.js" %}"></script>
 
-	
+
+<script src="{% static 'js/bootstrap-uploadprogress.js' %}"></script>
+
+
+
 
 	
 	</body>
